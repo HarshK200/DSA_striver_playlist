@@ -14,11 +14,13 @@
 // mod binary_serarch;
 // mod sort_arr_0_1_2;
 // mod majority_element;
-mod maximum_subarray_sum;
+// mod maximum_subarray_sum;
+mod buy_sell_stock;
 
 fn main() {
-    let nums = vec![-1];
+    let prices = vec![2, 1, 4];
+    println!("{:?}", prices);
 
-    let ans = maximum_subarray_sum::maximum_subarray_optimal(&nums);
-    println!("the maximum subarray sum is: {}", ans);
+    let ans = buy_sell_stock::buy_sell_stock_better(&prices);
+    println!("best time to buy sell stock: {}", ans);
 }

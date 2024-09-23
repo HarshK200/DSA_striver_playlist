@@ -38,16 +38,24 @@ pub fn maximum_subarray_better(nums: &Vec<i32>) -> i32 {
 pub fn maximum_subarray_optimal(nums: &Vec<i32>) -> i32 {
     let mut sum = 0;
     let mut max = nums[0];
+    let mut start = 0;
+    let mut end = 0;
 
-    for i in nums.iter() {
-        sum += *i;
+    for i in 0..nums.len() {
+        if sum == 0 {
+            start = i;
+        }
+        sum += nums[i];
         if sum > max {
             max = sum;
+            end = i;
         }
         if sum < 0 {
             sum = 0;
         }
     }
+
+    println!("subarray range [{start}..{end}]");
 
     return max;
 }
