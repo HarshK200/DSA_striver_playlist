@@ -15,12 +15,13 @@
 // mod sort_arr_0_1_2;
 // mod majority_element;
 // mod maximum_subarray_sum;
-mod buy_sell_stock;
+// mod buy_sell_stock;
+mod rearrange_by_sign;
 
 fn main() {
-    let prices = vec![2, 1, 4];
-    println!("{:?}", prices);
+    let nums = vec![3,1,-2,-5,2,-4];
+    println!("{:?}", nums);
 
-    let ans = buy_sell_stock::buy_sell_stock_better(&prices);
-    println!("best time to buy sell stock: {}", ans);
+    let ans = rearrange_by_sign::rearrange_ele_by_sign_optimal(nums);
+    println!("rearranged: {:?}", ans);
 }

@@ -15,7 +15,7 @@ pub fn buy_sell_stock_bruteforce(prices: &Vec<i32>) -> i32 {
 }
 
 // NOTE: time complexity is O(n)
-pub fn buy_sell_stock_better(prices: &Vec<i32>) -> i32 {
+pub fn buy_sell_stock_optimal(prices: &Vec<i32>) -> i32 {
     if prices.len() == 1 {
         return 0;
     }
@@ -38,3 +38,6 @@ pub fn buy_sell_stock_better(prices: &Vec<i32>) -> i32 {
 
     return profit;
 }
+
+// TODO: also a quick note dp stands for dynamic programming which is just remebering prev state
+pub fn buy_sell_stock_dp(prices: &Vec<i32>) -> i32 {}
