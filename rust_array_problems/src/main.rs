@@ -16,12 +16,15 @@
 // mod majority_element;
 // mod maximum_subarray_sum;
 // mod buy_sell_stock;
-mod rearrange_by_sign;
+// mod rearrange_by_sign;
+// mod permutations;
+// mod next_permutation;
+mod leader_in_arr;
 
 fn main() {
-    let nums = vec![3,1,-2,-5,2,-4];
-    println!("{:?}", nums);
+    let nums = vec![1, 3, 2];
+    println!("{:?}", &nums);
 
-    let ans = rearrange_by_sign::rearrange_ele_by_sign_optimal(nums);
-    println!("rearranged: {:?}", ans);
+    let ans = leader_in_arr::leaders_in_arr_optimal(&nums);
+    println!("leaders: {:?}", ans);
 }
