@@ -19,12 +19,13 @@
 // mod rearrange_by_sign;
 // mod permutations;
 // mod next_permutation;
-mod leader_in_arr;
+// mod leader_in_arr;
+mod longest_consicutive_sequence;
 
 fn main() {
-    let nums = vec![1, 3, 2];
+    let nums = vec![1, 2, 0, 1];
     println!("{:?}", &nums);
 
-    let ans = leader_in_arr::leaders_in_arr_optimal(&nums);
-    println!("leaders: {:?}", ans);
+    let ans = longest_consicutive_sequence::longest_consecutive_sequence_optimal(nums);
+    println!("longest consequtive sequence is: {}", ans);
 }
